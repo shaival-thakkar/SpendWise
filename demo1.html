@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SpendWise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- top link -->
+    <div id="top"></div>
+
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <a href="#top">
+          <img src="./assets/logo.png" alt="SpendWise Logo" width="40" height="40" />
+          <span>SpendWise</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Signup</a></li>
+          <li><a href="#steps">Get Started</a></li>
+          <li><a href="#footer-about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="typing-animation"></h1>
+        <p class="hero-subtext">
+          Take control of your finances effortlessly. Set budgets, track spending,
+          and earn rewards for staying on track. Your smarter financial journey starts here!
+        </p>
+        <button class="hero-btn">Sign Up Now</button>
+      </div>
+      <div class="hero-right">
+        <img src="./assets/makeme.png" alt="Hero Image" />
+      </div>
+    </section>
+
+    <!-- quote -->
+    <section class="quote-section">
+      <p class="quote-text">
+        <em>“Do not save what is left after spending, but spend what is left after saving.” – Warren Buffet</em>
+      </p>
+    </section>
+
+    <!--get started-->
+    <section id="steps" class="steps-section">
+      <div class="steps-left">
+        <img src="assets/how-it-works.png" alt="Steps Graphic" />
+      </div>
+      <div class="steps-right">
+        <h2>How to Get Started</h2>
+        <ul>
+          <li><strong>1. Login or Sign Up:</strong> Create your account or log in to get started.</li>
+          <li>
+            <strong>2. Enter Your Credentials:</strong> Use your email and password.
+            <span style="color: red;">Never share bank or private details with any random site!</span>
+          </li>
+          <li><strong>3. Access Your Dashboard:</strong> View your budget, expenses, and virtual coins all in one place.</li>
+          <li><strong>4. Start Tracking:</strong> Enter your daily expenses or income with categories.</li>
+          <li><strong>5. Earn Rewards:</strong> Stay within your budget and collect virtual coins.</li>
+          <li><strong>6. Redeem & Grow:</strong> Use coins for financial rewards or invest in your future.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- footer avse -->
+    <footer id="footer-about" class="footer-about">
+      <div class="about-section">
+        <h2>About SpendWise</h2>
+        <p>
+          SpendWise is your all-in-one solution to manage personal finances. We make it
+          simple to set budgets, track daily expenses, and earn virtual coins for responsible
+          spending. Whether you’re looking to save for a dream vacation or invest for the future,
+          SpendWise has got you covered!
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="foot-left">
+          <img src="assets/logo.png" alt="Footer Logo" class="footer-logo" />
+          <p>© 2024 SpendWise. All rights reserved.</p>
+        </div>
+        <div class="foot-middle">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#steps">Get Started</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="foot-right">
+          <div class="social-icons">
+            <a href="https://twitter.com/yourhandle" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com/yourchannel" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-credits">
+        <p>Made by <strong>Team Task Tacklers</strong> with ❤️ and ☕</p>
+      </div>
+    </footer>
+
+    <!-- Letter-by-Letter Typing Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const text = "Spend Smarter, Live Better";
+        let index = 0;
+        const speed = 80;
+        const typingElement = document.querySelector(".typing-animation");
+
+        // Clear initial text
+        typingElement.textContent = "";
+
+        function typeLetter() {
+          if (index < text.length) {
+            typingElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeLetter, speed);
+          }
+        }
+        typeLetter();
+      });
+    </script>
+  </body>
+</html>

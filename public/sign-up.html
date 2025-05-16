@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" sizes="64x64" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./sign-up.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>SpendWise login</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html#top">
+        <img src="./assets/logo.png" alt="SpendWise Logo" width="40" height="40" />
+        <span>SpendWise</span>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="login.html">login</a></li>
+        <li><a href="index.html#steps">Get Started</a></li>
+        <li><a href="./index.html#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form>
+      <h2>Sign Up</h2>
+      <div class="form-group">
+        <label for="fullname">Full Name <span>*</span></label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number <span>*</span></label>
+        <input type="tel" id="mobile" name="mobile" required />
+      </div>
+      <!-- <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div> -->
+      <div class="form-group">
+        <label for="password">Password </label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password <span>*</span></label>
+        <input type="password" id="confirm-password" name="confirm-password" required />
+      </div>
+      <button id="register" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- footer avse -->
+  <footer id="footer-about" class="footer-about">
+    <div class="about-section">
+      <h2>About SpendWise</h2>
+      <p>
+        SpendWise is your all-in-one solution to manage personal finances. We
+        make it simple to set budgets, track daily expenses, and earn virtual
+        coins for responsible spending. Whether you’re looking to save for a
+        dream vacation or invest for the future, SpendWise has got you
+        covered!
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div class="foot-left">
+        <img src="assets/logo.png" alt="Footer Logo" class="footer-logo" />
+        <p>© 2024 SpendWise. All rights reserved.</p>
+      </div>
+      <div class="foot-middle">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html#top">Home</a></li>
+          <li><a href="index.html#steps">Get Started</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="foot-right">
+        <div class="social-icons">
+          <a href="https://twitter.com/yourhandle" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://youtube.com/yourchannel" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-credits">
+      <p>Made by <strong>Team Task Tacklers</strong> with ❤️ and ☕</p>
+    </div>
+  </footer>
+  <script>
+    feather.replace();
+  </script>
+  <script src="script.js"></script>
+  <script src="signup.js"></script>
+</body>
+
+</html>

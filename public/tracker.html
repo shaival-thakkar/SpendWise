@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" sizes="64x64" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tracker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Finance Tracker - A Personal Finance App</title>
+</head>
+
+<body>
+    <!-- <header class="header-part"> -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#top">
+                <img src="./assets/logo.png" alt="SpendWise Logo" width="40" height="40" />
+                <span>SpendWise</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./sign-up.html">Signup</a></li>
+                <li><a href="#steps">Get Started</a></li>
+                <li><a href="#footer-about">About</a></li>
+                <li><a href="./logout.html"></a></li>
+                <li> <a href="./logout.html" class="btn-head"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Page Content -->
+    <section class="main-content" id="tracker">
+        <div class="head-text">
+            <h1>hello <span id="Uname">xyz</span></h1>
+            <h1>Access Your Personal Finance Tracker</h1>
+            <div class="under-head-text"></div>
+        </div>
+        <br />
+
+        <div class="tracker-part">
+            <div class="tracker-balance">
+                Current Balance: <span id="balance" class="current-balance"></span>
+            </div>
+
+            <div class="currency-filter">
+                <div class="filter-left">
+                    <label for="currency">Select Currency:</label>
+                    <select id="currency" onchange="updateBalance()">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="INR" selected>INR</option>
+                    </select>
+                </div>
+                <div class="filter-right">
+                    <label for="text" class="date-box">Choose Date:</label>
+                    <input type="date" id="date" placeholder="Date" />
+                </div>
+            </div>
+
+            <div class="transaction-form">
+                <input type="text" id="description" placeholder="Description" />
+                <input type="number" id="amount" placeholder="Amount" />
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button onclick="addTransaction()">Add Transaction</button>
+                <button onclick="handleDownload()">Export</button>
+            </div>
+            <div class="table-part" id="table-part">
+                <table id="transaction-table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer-about" class="footer-about">
+        <div class="about-section">
+            <h2>About SpendWise</h2>
+            <p>
+                SpendWise is your all-in-one solution to manage personal finances. We make it
+                simple to set budgets, track daily expenses, and earn virtual coins for responsible
+                spending. Whether you’re looking to save for a dream vacation or invest for the future,
+                SpendWise has got you covered!
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <div class="foot-left">
+                <img src="assets/logo.png" alt="Footer Logo" class="footer-logo" />
+                <p>© 2024 SpendWise. All rights reserved.</p>
+            </div>
+            <div class="foot-middle">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#steps">Get Started</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="foot-right">
+                <div class="social-icons">
+                    <a href="https://twitter.com/yourhandle" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://youtube.com/yourchannel" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-credits">
+            <p>Made by <strong>Team Task Tacklers</strong> with ❤️ and ☕</p>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+    <script src="tracker.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
